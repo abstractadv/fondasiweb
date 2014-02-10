@@ -1,0 +1,56 @@
+/* ==========================================================================
+    $ Grid
+   ========================================================================== */
+
+/**
+ * Use Flexbox for Grid system
+ */
+
+ .grid {
+ 	display: flex;
+ 	flex-flow: row wrap;
+ }
+
+.grid-u {
+	flex: 1;
+}
+
+
+
+
+/**
+ * Fallback for non-support flex-wrap browser (firefox & old < IE10)
+ */
+ .no-flexbox {
+ 	.grid {
+		display: block;
+		padding: 0;
+		margin: 0;
+		text-align: left;
+		font-size: 0;
+ 	}
+
+ 	.grid-u {
+ 		box-sizing: border-box;
+ 		display: inline-block;
+ 		font-size: 1rem;
+ 		margin: 0;
+ 		padding: 0;
+ 		text-align: left;
+ 		vertical-align: top;
+ 		width: 100%;
+ 	}
+ }
+
+
+
+ .grid-u-1-2 {
+ 	flex: 0 0 50%;
+ 	//width: 50%;
+ }
+
+.no-flexbox {
+	.grid-u-1-2 {
+		width: 50%;
+	}
+}

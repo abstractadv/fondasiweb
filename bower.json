@@ -1,0 +1,20 @@
+{
+  "name": "indrablog",
+  "version": "0.0.0",
+  "authors": [
+    "indraptama <indra.symfonia@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "suit": "~0.3.0",
+    "normalize-css": "~3.0.0"
+  }
+}

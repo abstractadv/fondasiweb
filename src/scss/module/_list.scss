@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Base List Element Style
+   ========================================================================== */
+
+ul,
+ol,
+dl {
+	margin-bottom: $base-spacing-unit;
+}
+
+li {
+	font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+}
+
+
+
+/*
+ * Set margin on ol li
+ */
+
+ ol {
+ 	> li {
+ 		margin-left: $base-spacing-unit;
+ 	}
+ }
+
+/*
+ * Remove list-style on unordered list
+ */
+
+ ul {
+ 	list-style: none;
+ 	padding-left: 0;
+ 	margin-left: 0;
+ }
+

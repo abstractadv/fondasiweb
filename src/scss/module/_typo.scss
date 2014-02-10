@@ -1,0 +1,65 @@
+html {
+
+}
+
+body {
+    
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    hyphens: auto;
+    word-wrap: break-word;
+}
+
+// Base Heading Setting
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font-family;
+    color: $heading-color;
+    text-rendering: optimizeLegibility; 
+    font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+}
+
+
+
+p {
+    margin-bottom: $base-line-height;
+    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+}
+
+
+
+
+/*
+ * HTML 5 Inline Style Element
+ */
+
+b,
+strong,
+.bold {
+    font-weight: $bold-weight;
+}
+
+i {
+    font-style: italic;
+}
+
+
+
+
+
+.small-caps {
+    font-feature-settings: 'smcp' 1, 'kern' 1;
+}
+
+.lining-numerals {
+    font-feature-settings: 'lnum' 1, 'kern' 1;
+}
+
+.oldstyle-numerals {
+    font-feature-settings: 'onum' 1, 'kern' 1;
+}

@@ -1,0 +1,71 @@
+
+
+// Basic Typography Variable
+$base-font-size: 1rem;
+$base-line-height: 1.8rem;
+$base-spacing-unit: $base-line-height;
+$half-spacing-unit: $base-spacing-unit/2;
+
+// Font family variable
+$base-font-family: "Sans-serif";
+$heading-font-family: "Sans-serif"; 
+
+$normal-weight: 300;
+$bold-weight:600;
+$xbold-weight: 900;
+
+
+
+// Typography Color
+$heading-color: #111;
+$sub-heading-color: #222;
+$paragraph-color: #444;
+
+
+// Base Color Variable
+$white: #f5f5f5;
+$black: #111;
+$gray: #ccc;
+
+$primary-color: #fff;
+$secondary-color: #000;
+$tertiary-color: #ddd;
+
+$fancy-color-primary: #B163A3; // Radiant Orchid
+$fancy-color-secondary: #444;//
+
+
+// Choose base CSS (true or false)
+$use-eric-reset: true;
+$use-normalize: false;
+$reset-typo:  true;
+
+
+// Media Breakpoint Setting
+$palm: 35em;
+$portable: 60em;
+$desk:;
+$large:;
+
+
+
+
+
+
+
+
+
+
+// Choose base CSS ()
+//@import 'base/eric-reset';
+@import 'base/normalize';
+//@import 'base/reset';
+@import 'base/h5bp';
+
+
+@import 'module/typo';
+@import 'module/list';
+@import 'module/grid';
+
+
+@import 'helper/h5bp-h';

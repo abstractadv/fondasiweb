@@ -13,6 +13,7 @@ app
 final_build
 
 
+
 # ignore compresed file
 .7z
 .dmg

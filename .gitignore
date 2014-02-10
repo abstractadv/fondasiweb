@@ -1,0 +1,35 @@
+
+# ignore file with specify container
+.scssc
+.sass-cache
+
+
+# ignore folder
+
+node_modules
+_site
+bower
+app
+final_build
+
+
+# ignore compresed file
+.7z
+.dmg
+.gz
+.iso
+.jar
+.rar
+.tar
+.zip
+
+# ignore OS generated file
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+__MACOSX

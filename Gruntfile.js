@@ -2,6 +2,49 @@ module.exports = function(grunt){
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
+    
+    //Jade to HTML Task
+    jade: {
+      dev: {
+        options: {
+          pretty: true
+        },
+        files: {
+          'app/index.pretty.html':'src/jade/index.jade'
+        },
+      },
+
+      fin: {
+        files: {
+          'final_build/index.pretty.html':'src/jade/index.jade'
+        }
+      },
+    },
+
+    // minify html file
+    htmlmin: {
+      dev: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'app/index.html':'app/index.pretty.html'
+        },
+      },
+
+      fin: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'app/index.html':'app/index.pretty.html'
+        },
+      }
+    },
+
+    // Sass Task
     sass: {
       dev: {
         files: {
@@ -10,6 +53,7 @@ module.exports = function(grunt){
       },
     },
 
+    // Prefixer with Myth.io
     myth: {
       dev: {
         files: {
@@ -18,6 +62,7 @@ module.exports = function(grunt){
       },
     },
 
+    // Add rem fallback
     pixrem: {
       options: {
         rootvalue: '16px',
@@ -29,6 +74,7 @@ module.exports = function(grunt){
       }
     },
 
+    // Watch Task
     watch:{
       css: {
         files: [
@@ -38,10 +84,20 @@ module.exports = function(grunt){
           'sass','myth','pixrem'
         ],
       },
+
+      page: {
+        files: [
+          'src/jade/{,*/}*.{jade,html}',
+        ],
+        tasks: [
+          'jade:dev','htmlmin:dev'
+        ]
+      }
+
     },
 
 
-
+    // Browser Sync 
     browser_sync: {
       dev: {
         options: {
@@ -74,6 +130,8 @@ module.exports = function(grunt){
 
 
   grunt.registerTask('default',[
+      'jade:dev',
+      'htmlmin:dev',
       'sass:dev',
       'myth:dev',
       'pixrem',

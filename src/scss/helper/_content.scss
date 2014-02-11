@@ -1,0 +1,54 @@
+/* ==========================================================================
+    $ Content Helper
+    ========================================================================== */
+
+/**
+ * text-align helper
+ */
+
+ .text-center {
+ 	text-align: center!important;
+ }
+
+
+
+
+.text-white {
+	color: #f5f5f5;
+}
+
+
+
+/**
+ * Column
+ */
+
+ .column-2 {
+	columns: 2;
+	column-gap: $base-spacing-unit;
+}
+
+
+
+/**
+ * background
+ */
+
+ .bg-white {
+	background-color: rgba(#f5f5f5, .95);
+}
+
+.bg--grey {
+	background-color: rgba(#eee,.95);
+}
+
+.bg-dark {
+	background-color: rgba(#1F1F21, .95);
+	h2 {
+		color: #f5f5f5;
+	}
+}
+
+.bg-orchid {
+	background-color: #B163A3;
+}

@@ -1,18 +1,43 @@
-// ==========================================================================
-// Various Mixin
-// ========================================================================== */
+
+// Breakpoint Helper
+@mixin bp($point) {
+  @if $point == baby-bear {
+    @media screen and (max-width:35em) { @content; }
+  }
+  @else if $point == bro-bear {
+    @media screen and (min-width:35em) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media screen and (min-width:48em)  { @content; }
+  }
+  @else if $point == papa-bear {
+    @media screen and (min-width:60)  { @content; }
+  }
+}
+
+// clearfix
+@mixin clearfix {
+  &:before, &:after{
+    display: table;
+    content: "";
+  }
+  &:after{
+    clear: both;
+  }
+}
 
 
-// Mixin Clearfix
+//
+// HIde TExt
+//
 
-@ mixin clearfix {
-	&:before,
-	&:after {
-	    content: " "; /* 1 */
-	    display: table; /* 2 */
-	}
+ @mixin hide-text {
+  overflow: hidden;
 
-	&:after {
-    	
-	}	
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+  }
 }

@@ -1,0 +1,152 @@
+/* ==========================================================================
+    $ Layout Helper
+    ========================================================================== */
+/**
+ * In this helper we use lote !impotant tag. use with care
+ */
+
+/* ==========================================================================
+    $ Layout Related Helper
+   ========================================================================== */
+
+
+/**
+ * Island and islet
+ */
+
+.island,
+.islet{
+    display:block;
+    @extend .clearfix;
+}
+.island{
+    padding:$base-spacing-unit;
+}
+    .island > :last-child,
+    .islet > :last-child{
+        margin-bottom:0;
+    }
+
+.islet{
+    padding:$half-spacing-unit;
+}
+
+
+ /**
+ * Wrapper and contaoner
+ */
+
+/**
+ * for make text still at 60-70 character
+ */
+.ideal-wrapper {
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: $base-wrapper;
+    margin: 0 auto;
+}
+.container-large {
+    margin: 0 $base-spacing-unit;
+}
+
+
+/**
+ * Margin Helper
+ */
+
+.marTop {margin-top: $base-spacing-unit!important}
+.marR {margin-right: $base-spacing-unit!important}
+.marBot {margin-bottom: $base-spacing-unit!important}
+.marL {margin-left: $base-spacing-unit;}
+.marTall{margin-top: $base-spacing-unit; margin-bottom: $base-spacing-unit!important}
+.marSide{margin-left: $base-spacing-unit; margin-right: $base-spacing-unit!important}
+.marAll{margin: $base-spacing-unit!important}
+
+/**
+ * Double margin Helper
+ */
+.marTop--double {margin-top: $base-spacing-unit*2!important;}
+.marR--double {margin-right: $base-spacing-unit*2!important}
+.marBot--double {margin-bottom: $base-spacing-unit*2!important;}
+.marL--double {margin-left: $base-spacing-unit*2!important;}
+.marTall--double {margin-top: $base-spacing-unit*2!important; margin-bottom: $base-spacing-unit*2!important}
+.marSide--double {margin-left: $base-spacing-unit*2!important; margin-right: $base-spacing-unit*2!important}
+.marAll--double {margin: $base-spacing-unit*2!important}
+
+/**
+ * Triple Margin Helper
+ */
+
+.marTop--triple {margin-top: $base-spacing-unit*3!important;}
+.marR--triple {margin-right: $base-spacing-unit*3!important}
+.marBot--triple {margin-bottom: $base-spacing-unit*3!important;}
+.marL--triple {margin-left: $base-spacing-unit*3!important;}
+.marTall--triple {margin-top: $base-spacing-unit*3!important; margin-bottom: $base-spacing-unit*3!important}
+.marSide--triple {margin-left: $base-spacing-unit*3!important; margin-right: $base-spacing-unit*3!important}
+.marAll--triple {margin: $base-spacing-unit*3!important}
+
+
+/**
+ * PAdding Helper
+ */
+
+.padTop {padding-top: $base-spacing-unit;}
+.padR {padding-right: $base-spacing-unit!important}
+.padBot {padding-bottom: $base-spacing-unit;}
+.padL {padding-left: $base-spacing-unit;}
+.padTall{padding-top: $base-spacing-unit; padding-bottom: $base-spacing-unit!important}
+.padSide{padding-left: $base-spacing-unit; padding-right: $base-spacing-unit!important}
+.padAll{padding: $base-spacing-unit!important}
+
+/**
+ * Double padding Helper
+ */
+.padTop--double {padding-top: $base-spacing-unit*2!important;}
+.padR--double {padding-right: $base-spacing-unit*2!important}
+.padBot--double {padding-bottom: $base-spacing-unit*2!important;}
+.padL--double {padding-left: $base-spacing-unit*2!important;}
+.padTall--double {padding-top: $base-spacing-unit*2!important; padding-bottom: $base-spacing-unit*2!important}
+.padSide--double {padding-left: $base-spacing-unit*2; padding-right: $base-spacing-unit*2}
+.padAll--double {padding: $base-spacing-unit*2}
+
+/**
+ * Triple padding Helper
+ */
+
+.padTop--triple {padding-top: $base-spacing-unit*3!important;}
+.padR--triple {padding-right: $base-spacing-unit*3!important}
+.padBot--triple {padding-bottom: $base-spacing-unit*3!important;}
+.padL--triple {padding-left: $base-spacing-unit*3!important;}
+.padTall--triple {padding-top: $base-spacing-unit*3!important; padding-bottom: $base-spacing-unit*3!important}
+.padSide--triple {padding-left: $base-spacing-unit*3!important; padding-right: $base-spacing-unit*3!important}
+.padAll--triple {padding: $base-spacing-unit*3!important}
+
+
+
+
+/**
+ * Remove Margin and Padding
+ */
+
+.noMar {margin: 0}
+.noPad {padding: 0}
+.flush {padding: 0; margin: 0}
+
+.noMar--left {margin-left: 0;}
+.noMar--right {margin-right: 0}
+
+
+
+
+/**
+ * Absolute center using transform (works on > ie9)
+ */
+
+ .abs-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+ }

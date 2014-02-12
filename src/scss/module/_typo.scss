@@ -2,49 +2,35 @@
     $ Typography
    ========================================================================== */
 
-/**
- * 59.301	3.706	3.706	456.162
-	41.887	2.618	2.618	322.208
-	36.651	2.291	2.291	281.931
-	25.888	1.618	1.618	199.138
-	22.652	1.416	1.416	174.246
-	16.000	1		1		123.077
-	14.000	0.875	0.875	107.692
-	9.889	0.618	0.618	76.069
-	8.653	0.541	0.541	66.562
-	6.112	0.382	0.382	47.015
-
-	font-family: 'Merriweather', serif;
-	font-family: 'Open Sans', sans-serif;
- */
 
 html {
-	font-size: 87.5%;
+	
 }
 
 body { 
- 	font-family: 'Source Sans Pro', "Segoe WP", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
- 	font-size: 1rem;
+ 	font-family: $base-font-family;
+ 	font-size: $base-font-size;
  	line-height: $base-line-height;
- 	font-weight: 300;
- 	color: #444;
- 	box-shadow: 0px 0px 3px rgba(#000,.5);
+ 	hyphens: auto;
+    word-wrap: break-word;
  }
 
- h1,h2,h3, dt {
- 	font-family: 'Merriweather', calibri, serif;
- 	font-weight: 300;
- 	color: #222;
- }
+// base heading
 
- h4,h5,h6 {
- 	ffont-family: 'Source Sans Pro', "Segoe WP", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
- 	font-weight: 600;
- 	color: #222;
- }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font-family;
+    color: $heading-color;
+    text-rendering: optimizeLegibility; 
+    font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+}
 
 .sans {
-	font-family: 'Source Sans Pro', "Segoe WP", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-family: $sans-font-family;
 }
 
 .bold {
@@ -88,9 +74,13 @@ dt {
 	margin-bottom: 0;	
 }
 
-p {
 
+
+// Paragraph
+
+p {
 	margin-bottom: $base-spacing-unit;
+	font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
 }
 
 
@@ -104,6 +94,23 @@ time {
 
 
 
+/*
+ * HTML 5 Inline Style Element
+ */
+
+b,
+strong,
+.bold {
+    font-weight: $bold-weight;
+}
+
+i {
+    font-style: italic;
+}
+
+
+
+
 .intro,
 .lead {
 	font-size: 1.416rem;
@@ -111,10 +118,23 @@ time {
 	margin-bottom: ($base-line-height*3) - 2.25rem;
 }
 
-i,
-.summary {
-	font-style: italic;
+
+.small-caps {
+    font-feature-settings: 'smcp' 1, 'kern' 1;
 }
+
+.lining-numerals {
+    font-feature-settings: 'lnum' 1, 'kern' 1;
+}
+
+.oldstyle-numerals {
+    font-feature-settings: 'onum' 1, 'kern' 1;
+}
+
+
+
+
+
 
 
 /**
@@ -133,28 +153,4 @@ h2 a:hover {
 }
 
 
-@media only screen and (min-width: 35em) {
-	html {
-		font-size: 100%;
-	}
-
-	body {
-		
-		font-weight: 300;
-	}
-
-}
-
-
-@media only screen and (min-width: 1440px) {
-	html {
-		font-size: 115%;
-	}
-
-	body {
-
-		font-weight: 300;
-	}
-
-}
 

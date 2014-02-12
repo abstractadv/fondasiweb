@@ -26,28 +26,6 @@
   }
 }
 
-<<<<<<< HEAD
-@mixin clearfix {
-	&:before,
-	&:after {
-	    content: " "; /* 1 */
-	    display: table; /* 2 */
-	}
-
-	&:after {
-    	
-	}	
-}
-
-/**
- * HIde TExt
- */
-=======
-
-//
-// HIde TExt
-//
->>>>>>> ccd263614774059b9685f50ccd6585a152dc5b39
 
  @mixin hide-text {
   overflow: hidden;
@@ -58,24 +36,4 @@
     width: 0;
     height: 100%;
   }
-<<<<<<< HEAD
-}
-
-
-// media queries
-@mixin bp($point) {
-  @if $point == baby-bear {
-    @media screen and (max-width:35em) { @content; }
-  }
-  @else if $point == bro-bear {
-    @media screen and (min-width:35em) { @content; }
-  }
-  @else if $point == mama-bear {
-    @media screen and (min-width:48em)  { @content; }
-  }
-  @else if $point == papa-bear {
-    @media screen and (min-width:60)  { @content; }
-  }
-=======
->>>>>>> ccd263614774059b9685f50ccd6585a152dc5b39
 }

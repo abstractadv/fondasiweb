@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Global Size
+   ========================================================================== */
+
+@mixin width-setup($name: "") {
+    
+    /*
+     * Full
+     */
+    .#{$name}sizeFull                { width: 100%; }
+    .#{$name}sizeOneWhole                { width: 100%; }
+
+    /*
+     * Half
+     */
+    .#{$name}sizeOneHalf                 { width: 50%; }
+
+    /*
+     * Third
+     */
+    .#{$name}sizeOneThird                { width: 33.3333%; }
+    .#{$name}sizeTwoThird                { width: 66.6666%; } 
+
+    /*
+     * Quarter
+     */
+    .#{$name}sizeOneQuarter              { width: 25%; }
+    .#{$name}sizeTwoQuarter              { width: 50%; }
+    .#{$name}sizeThreeQuarter            { width: 75%; }
+
+    /**
+    * Fifths
+    */
+    .#{$name}sizeOneFifth                { width: 20%; }
+    .#{$name}sizeTwoFifth                { width: 40%; }
+    .#{$name}sizeThreeFifth              { width: 60%; }
+    .#{$name}sizeFourFifth               { width: 80%; }  
+
+    /*
+     * Sisxth
+     */
+    .#{$name}sizeOneSixth           { width: 16.666%;  }
+    .#{$name}sizeTwoSixth           { width: 33.3333%; }
+    .#{$name}sizeThreeSixth         { width: 50%;      }
+    .#{$name}sizeFourSixth          { width: 66.6666%; }
+    .#{$name}sizeFiveSixth          { width: 83.333%;  }
+
+    /**
+    *Eighths
+    */
+    .#{$name}sizeOneEight           { width: 12.5%; }
+    .#{$name}sizeTwoEight           { width: 25%;   }
+    .#{$name}sizeThreeEight         { width: 37.5%; }
+    .#{$name}sizeFourEight          { width: 50%;   }
+    .#{$name}sizeFiveEight          { width: 62.5%; }
+    .#{$name}sizeSixEight           { width: 75%;   }
+    .#{$name}sizeSevenEight         { width: 87.5%; }
+
+    /**
+    *Tenths
+    */
+    .#{$name}sizeOneTen             { width: 10%; }
+    .#{$name}sizeTwoTen             { width: 20%; }
+    .#{$name}sizeThreeTen           { width: 30%; }
+    .#{$name}sizeFourTen            { width: 40%; }
+    .#{$name}sizeFiveTen            { width: 50%; }
+    .#{$name}sizeSixTen             { width: 60%; }
+    .#{$name}sizeSevenTen           { width: 70%; }
+    .#{$name}sizeEightTen           { width: 80%; }
+    .#{$name}sizeNineTen            { width: 90%; }
+
+
+    /**
+    * Twelfths
+    */
+    .#{$name}sizeOneTwelve      { width:8.333%;    }
+    .#{$name}sizeTwoTwelve      { width: 16.666%;  }
+    .#{$name}sizeThreeTwelve    { width: 25%;      }
+    .#{$name}sizeFourTwelve     { width: 33.3333%; }
+    .#{$name}sizeFiveTwelve     { width:41.666%    }
+    .#{$name}sizeSixTwelve      { width: 50%;      }
+    .#{$name}sizeSevenTwelve    { width:58.333%;   }
+    .#{$name}sizeEightTwelve    { width: 66.6666%; }
+    .#{$name}sizeNineTwelve     { width: 75%;      }
+    .#{$name}sizeTenTwelve      { width: 83.333%;  }
+    .#{$name}sizeElevenTwelve   { width:91.666%;   }
+
+
+}
+
+@include width-setup;
+
+@include bp(small) {
+    @include width-setup("small--")
+}
+
+@include bp(medium) {
+    @include width-setup("medium--")
+}
+
+@include bp(large) {
+    @include width-setup("large--")
+}
+
+@include bp(xlarge) {
+    @include width-setup("xlarge--")
+}

@@ -27,6 +27,7 @@ h6 {
     color: $heading-color;
     text-rendering: optimizeLegibility; 
     font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    font-weight: 600;
 }
 
 .sans {

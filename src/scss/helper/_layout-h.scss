@@ -36,6 +36,8 @@
 
 .container {
     max-width: 1140px;
+    padding-left: $base-spacing-unit;
+    padding-right: $base-spacing-unit;
     margin: 0 auto;
 }
 .container-large {

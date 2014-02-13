@@ -10,7 +10,7 @@ module.exports = function(grunt){
           pretty: true
         },
         files: {
-          'app/index.pretty.html':'src/jade/index.jade'
+          'index.pretty.html':'src/jade/index.jade'
         },
       },
 
@@ -29,7 +29,7 @@ module.exports = function(grunt){
           collapseWhitespace: true
         },
         files: {
-          'app/index.html':'app/index.pretty.html'
+          'index.html':'index.pretty.html'
         },
       },
 
@@ -39,7 +39,7 @@ module.exports = function(grunt){
           collapseWhitespace: true
         },
         files: {
-          'app/index.html':'app/index.pretty.html'
+          'index.html':'index.pretty.html'
         },
       }
     },
@@ -57,7 +57,7 @@ module.exports = function(grunt){
     myth: {
       dev: {
         files: {
-          'app/css/style.prefix.css':'app/css/style.unprefix.css'
+          'app/css/style.prefix.css':'css/style.unprefix.css'
         },
       },
     },
@@ -74,6 +74,17 @@ module.exports = function(grunt){
       }
     },
 
+    recess: {
+      fin: {
+        options: {
+          compile: true
+        },
+        files: {
+          'app/css/style.css': ['app/css/style.css']
+        }
+      }
+    },
+
     // Watch Task
     watch:{
       css: {
@@ -81,7 +92,7 @@ module.exports = function(grunt){
           'src/scss/{,*/}*.scss',
         ],
         tasks: [
-          'sass','myth','pixrem'
+          'sass','myth','pixrem','recess:fin'
         ],
       },
 
@@ -116,11 +127,11 @@ module.exports = function(grunt){
 
         bsFiles: {
           src: [
-            'app/{,*/}*.html',
-            'app/css/style.prefix.css',
-            'app/css/*.css',
-            'app/js/{,*/}*.js',
-            'app/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+            '{,*/}*.html',
+            'css/style.prefix.css',
+            'css/*.css',
+            'js/{,*/}*.js',
+            'img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
           ]
         }
       }
@@ -130,11 +141,12 @@ module.exports = function(grunt){
 
 
   grunt.registerTask('default',[
-      'jade:dev',
-      'htmlmin:dev',
+      //'jade:dev',
+      //'htmlmin:dev',
       'sass:dev',
       'myth:dev',
       'pixrem',
+      'recess:fin',
       //'browser_sync',
       'watch'
 
